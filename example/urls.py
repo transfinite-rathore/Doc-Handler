@@ -15,8 +15,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('', index),
-    path('admin/', admin.site.urls),
+    path('',index),
     path('documents/',documents,name="documents"),
     path('register-page/',register_page,name="register_page"),
     path('add-documents/',add_document,name="add_documents"),
@@ -32,4 +31,4 @@ if settings.DEBUG:
                               document_root=settings.MEDIA_ROOT)
 
 
-urlpatterns += staticfiles_urlpatterns()
+# urlpatterns += staticfiles_urlpatterns()
