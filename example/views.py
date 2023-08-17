@@ -91,7 +91,7 @@ def register_page(request):
         user=User.objects.filter(username=username)
         if user.exists():
             messages.info(request, "User name already taken")
-            return redirect("/register/")
+            return redirect("/register-page/")
         
           
         user=User.objects.create(
